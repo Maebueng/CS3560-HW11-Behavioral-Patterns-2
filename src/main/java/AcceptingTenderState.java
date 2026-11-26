@@ -10,7 +10,7 @@ public class AcceptingTenderState implements StateOfVendingMachine {
 
     public void productSelection(VendingMachine machine) {
         System.out.println("Product selected. Please insert money.");
-        machine.setState(new AcceptingTender());
+        machine.setState(new AcceptingTenderState());
     }
 
     public void dispensing(VendingMachine machine) {

@@ -1,27 +1,27 @@
 public class VendingMachine {
-    private State state = new IdleState();
+    private StateOfVendingMachine state = new IdleState();
 
-    public void setState(State state) {
+    public void setState(StateOfVendingMachine state) {
         this.state = state;
     }
 
-    public void getState() {
+    public StateOfVendingMachine getState() {
         return state;
     }
 
     public void idle() {
-        getState().idle(this);
+        state.idle(this);
     }
 
     public void acceptingTender() {
-        getState().acceptingTender(this);
+        state.acceptingTender(this);
     }
 
     public void productSelection() {
-        getState().productSelection(this);
+        state.productSelection(this);
     }
 
     public void dispensing() {
-        getState().dispensing(this);
+        state.dispensing(this);
     }
 }
